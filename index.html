@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon-memory" type="image/png" sizes="32x32" href="./assets/images/icon-memory.svg">
+  <link rel="icon-reaction" type="image/png" sizes="32x32" href="./assets/images/icon-reaction.svg">
+  <link rel="icon-verbal" type="image/png" sizes="32x32" href="./assets/images/icon-verbal.svg">
+  <link rel="icon-visual" type="image/png" sizes="32x32" href="./assets/images/icon-visual.svg">
+  <title>Frontend Mentor | Results summary component</title>
+</head>
+
+<body>
+  <div class="screen">
+    <div class="container">
+      <div class="result">
+        <div class="title">
+          <span class="secondary" style="color: rgb(247, 230, 230);"><strong>Your Result</strong></span>
+        </div>
+        <div class="points">
+          <span style="font-size: 56px;font-weight: 800;">76</span>
+          <span style="color:hsl(240, 13%, 68%)">of 100</span>
+        </div>
+        <div class="description">
+          <span class="primary">Great</span>
+          <span class="secondary">You scored higher than 65% of the people who have taken these tests.</span>
+        </div>
+      </div>
+      <div class="summary">
+        <div class="header">
+          <span class="secondary" style="color: hsl(0, 3%, 18%);"><strong>Summary</strong></span>
+        </div>
+        <div class="reaction" style="background-color:hsl(0, 100%, 67%, 7%);">
+          <img src="./assets/images/icon-reaction.svg" alt="">
+          <span style="color:hsl(0, 100%, 67%); margin-right: 40px;">Reaction</span>
+          <span><strong>80</strong><span style="color:hsl(240, 13%, 68%)"> / 100</span></span>
+        </div>
+        <div class="memory" style="background-color:hsl(39, 100%, 56%, 7%);">
+          <img src="./assets/images/icon-memory.svg" alt="">
+          <span style="color:hsl(39, 100%, 56%);margin-right: 44px;">Memory</span>
+          <span><strong>92</strong><span style="color:hsl(240, 13%, 68%)"> / 100</span></span>
+        </div>
+        <div class="verbal" style="background-color:hsl(166, 100%, 37%, 7%);">
+          <img src="./assets/images/icon-verbal.svg" alt="">
+          <span style="color:hsl(166, 100%, 37%);margin-right: 58px;">Verbal</span>
+          <span><strong>61</strong><span style="color:hsl(240, 13%, 68%)"> / 100</span></span>
+        </div>
+        <div class="visual" style="background-color:hsl(234, 85%, 45%, 7%);">
+          <img src="./assets/images/icon-visual.svg" alt="">
+          <span style="color:hsl(234, 85%, 45%);margin-right: 58px;">Visual</span>
+          <span><strong>72</strong><span style="color:hsl(240, 13%, 68%)"> / 100</span></span>
+        </div>
+        <button class="continue">Continue</button>
+      </div>
+    </div>
+    <div class="attribution">
+      <span class="secondary" style="color:gray">Coded by <span class="primary"
+          style="font-weight: 500;color:black;">Kilvii</span></span>
+    </div>
+  </div>
+</body>
+
+</html>
+<style>
+  .screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 16px;
+    margin: 16px;
+  }
+
+  .result {
+    width: 232px;
+    height: 374px;
+    border-radius: 16px;
+    background: linear-gradient(hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 100%);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .summary {
+    min-width: 220px;
+    border-radius: 16px;
+    background-color: hsl(221, 100%, 96%);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+  }
+
+  .summary>*:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .header {
+    margin-top: 16px;
+    min-width: 200px;
+    font-family: 'Hanken Grotesk', sans-serif;
+  }
+
+  .title {
+    margin-top: 16px;
+    margin-bottom: 50px;
+    min-width: 200px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    text-align: center;
+  }
+
+  .points {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background: linear-gradient(hsla(256, 72%, 46%, 1) 0%, hsl(241, 81%, 54%) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .reaction,
+  .memory,
+  .verbal,
+  .visual {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    min-width: 200px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    border-radius: 8px;
+  }
+
+  .reaction>*,
+  .memory>*,
+  .verbal>*,
+  .visual>* {
+    margin-right: 10px;
+  }
+
+  .continue {
+    min-width: 232px;
+    background-color: hsl(224, 30%, 27%);
+    color: white;
+    padding: 16px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 32px;
+  }
+
+  .continue:hover {
+    background-color: rgb(102, 57, 224)
+  }
+
+  .primary {
+    color: white;
+    font-family: 'Hanken Grotesk', sans-serif;
+    margin-top: 16px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .secondary {
+    font-family: 'Hanken Grotesk', sans-serif;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 16px;
+    color: hsl(241, 100%, 89%)
+  }
+</style>
